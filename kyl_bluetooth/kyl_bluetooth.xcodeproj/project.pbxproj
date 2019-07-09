@@ -20,7 +20,10 @@
 		A524726622D31BF30048BD14 /* KYLLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524726522D31BF30048BD14 /* KYLLanguages.swift */; };
 		A524726822D31D770048BD14 /* KylBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524726722D31D770048BD14 /* KylBluetoothManager.swift */; };
 		A524735922D42DB30048BD14 /* KYLOCBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A524735822D42DB30048BD14 /* KYLOCBluetoothManager.m */; };
-		C77BA136F85C5D8AAC8590D8 /* Pods_kyl_bluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8743EB4DFA1786C292C714D9 /* Pods_kyl_bluetooth.framework */; };
+		A524735D22D462400048BD14 /* KYLPeripheralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524735C22D462400048BD14 /* KYLPeripheralController.swift */; };
+		A524735F22D4625F0048BD14 /* KYLCharacteristicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524735E22D4625F0048BD14 /* KYLCharacteristicController.swift */; };
+		A524736222D462B60048BD14 /* KYLPerpheralInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524736122D462B60048BD14 /* KYLPerpheralInfo.swift */; };
+		A524736422D467E70048BD14 /* KYLLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524736322D467E70048BD14 /* KYLLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		37507A0448356DE6E48F0957 /* Pods-kyl_bluetooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyl_bluetooth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kyl_bluetooth/Pods-kyl_bluetooth.debug.xcconfig"; sourceTree = "<group>"; };
-		8743EB4DFA1786C292C714D9 /* Pods_kyl_bluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kyl_bluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A524722C22D311CD0048BD14 /* kyl_bluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyl_bluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A524722F22D311CD0048BD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A524723122D311CD0048BD14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,10 @@
 		A524735722D42DB30048BD14 /* KYLOCBluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYLOCBluetoothManager.h; sourceTree = "<group>"; };
 		A524735822D42DB30048BD14 /* KYLOCBluetoothManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYLOCBluetoothManager.m; sourceTree = "<group>"; };
 		A524735A22D42FA00048BD14 /* KYLOCBluetoothType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYLOCBluetoothType.h; sourceTree = "<group>"; };
+		A524735C22D462400048BD14 /* KYLPeripheralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYLPeripheralController.swift; sourceTree = "<group>"; };
+		A524735E22D4625F0048BD14 /* KYLCharacteristicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYLCharacteristicController.swift; sourceTree = "<group>"; };
+		A524736122D462B60048BD14 /* KYLPerpheralInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYLPerpheralInfo.swift; sourceTree = "<group>"; };
+		A524736322D467E70048BD14 /* KYLLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYLLog.swift; sourceTree = "<group>"; };
 		E8F7A42A6071727F91C4936B /* Pods-kyl_bluetooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kyl_bluetooth.release.xcconfig"; path = "Pods/Target Support Files/Pods-kyl_bluetooth/Pods-kyl_bluetooth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A524726322D31AA30048BD14 /* CoreBluetooth.framework in Frameworks */,
-				C77BA136F85C5D8AAC8590D8 /* Pods_kyl_bluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				A524726222D31AA30048BD14 /* CoreBluetooth.framework */,
-				8743EB4DFA1786C292C714D9 /* Pods_kyl_bluetooth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +142,8 @@
 		A524722E22D311CD0048BD14 /* kyl_bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				A524736022D4627C0048BD14 /* model */,
+				A524735B22D4392F0048BD14 /* UI */,
 				A524735522D42C810048BD14 /* third */,
 				A524726422D31B9B0048BD14 /* tools */,
 				A524725D22D3165B0048BD14 /* bluetooth */,
@@ -183,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A524726522D31BF30048BD14 /* KYLLanguages.swift */,
+				A524736322D467E70048BD14 /* KYLLog.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -196,6 +203,23 @@
 				A524735622D42DB20048BD14 /* kyl_bluetooth-Bridging-Header.h */,
 			);
 			path = third;
+			sourceTree = "<group>";
+		};
+		A524735B22D4392F0048BD14 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A524735C22D462400048BD14 /* KYLPeripheralController.swift */,
+				A524735E22D4625F0048BD14 /* KYLCharacteristicController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A524736022D4627C0048BD14 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A524736122D462B60048BD14 /* KYLPerpheralInfo.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,11 +405,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A524735D22D462400048BD14 /* KYLPeripheralController.swift in Sources */,
 				A524726622D31BF30048BD14 /* KYLLanguages.swift in Sources */,
+				A524736222D462B60048BD14 /* KYLPerpheralInfo.swift in Sources */,
 				A524735922D42DB30048BD14 /* KYLOCBluetoothManager.m in Sources */,
+				A524735F22D4625F0048BD14 /* KYLCharacteristicController.swift in Sources */,
 				A524723222D311CD0048BD14 /* ViewController.swift in Sources */,
 				A524726122D318AF0048BD14 /* KylBluetooth+Types.swift in Sources */,
 				A524725F22D316C00048BD14 /* KylBluetooth.swift in Sources */,
+				A524736422D467E70048BD14 /* KYLLog.swift in Sources */,
 				A524723022D311CD0048BD14 /* AppDelegate.swift in Sources */,
 				A524726822D31D770048BD14 /* KylBluetoothManager.swift in Sources */,
 			);
@@ -567,6 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLWCRSS83U;
 				INFOPLIST_FILE = kyl_bluetooth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLWCRSS83U;
 				INFOPLIST_FILE = kyl_bluetooth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

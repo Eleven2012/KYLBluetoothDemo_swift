@@ -53,8 +53,12 @@
     self.rhythm = [[BabyRhythm alloc]init];
     self.peripherals = [NSMutableArray array];
     [baby setBlockOnCentralManagerDidUpdateState:^(CBCentralManager *central) {
-        if (central.state == CBManagerStatePoweredOn) {
-            [SVProgressHUD showInfoWithStatus:@"设备打开成功，开始扫描设备"];
+        if (@available(iOS 10.0, *)) {
+            if (central.state == CBManagerStatePoweredOn) {
+                [SVProgressHUD showInfoWithStatus:@"设备打开成功，开始扫描设备"];
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }];
     //设置扫描到设备的委托
@@ -311,7 +315,7 @@
         NSLog(@"%@",RSSI);
     }];
 }
-- (void)KYL_didReadRSSIAtChannel:(KYLDidReadRSSIAtChannel)block{
+- (void)kyl_didReadRSSIAtChannel:(KYLDidReadRSSIAtChannel)block{
     self.readRSSIAtChannel = block;
 }
 
@@ -336,7 +340,7 @@
 - (void)kyl_discoverServicesAtChannel:(KYLDiscoverServicesAtChannel)block{
     self.discoverServicesBlock = block;
 }
-- (void)kyl_KYLDiscoverCharacteristicsAtChannel:(KYLDiscoverCharacteristicsAtChannel)block{
+- (void)kyl_discoverCharacteristicsAtChannel:(KYLDiscoverCharacteristicsAtChannel)block{
     self.discoverCharacteristicsBlock = block;
 }
 - (void)kyl_readValueForCharacterAtChannel:(KYLReadValueForCharacteristicAtChannel)block{

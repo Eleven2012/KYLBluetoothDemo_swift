@@ -134,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param block block
  */
-- (void)kyl_KYLDiscoverCharacteristicsAtChannel:(KYLDiscoverCharacteristicsAtChannel)block;
+- (void)kyl_discoverCharacteristicsAtChannel:(KYLDiscoverCharacteristicsAtChannel)block;
 
 /**
  读取特征值
