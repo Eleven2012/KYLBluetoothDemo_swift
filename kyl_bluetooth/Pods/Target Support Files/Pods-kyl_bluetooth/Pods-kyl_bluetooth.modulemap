@@ -1,0 +1,6 @@
+framework module Pods_kyl_bluetooth {
+  umbrella header "Pods-kyl_bluetooth-umbrella.h"
+
+  export *
+  module * { export * }
+}

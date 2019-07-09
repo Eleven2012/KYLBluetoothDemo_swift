@@ -1,0 +1,56 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '9.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@gitlab.ubt.com:Jimu_iOS/cocoapods.git'
+
+target 'kyl_bluetooth' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  #pod 'Firebase/Core'
+  #pod 'AFNetworking'
+  #pod 'Kingfisher', '~> 4.9.0'
+  #pod 'SDWebImage','<= 4.4.6'
+  #pod 'Alamofire', '~> 4.5'
+  #pod 'SnapKit', '~> 4.0.0'
+  #pod 'Bugly'
+  #pod 'SwiftyJSON','= 4.2.0'
+  #pod 'SSZipArchive', '~> 2.1.1'
+  #pod 'FMDB', '= 2.7.2'
+  #pod 'HandyJSON', '~> 5.0.0'
+  #pod 'FCUUID'
+  #pod 'Qiniu', '~> 7.0'
+  #pod 'Jimu-Blockly-Lib', '3.3.1'
+
+  # U-Share SDK UI模块（分享面板，建议添加）
+  #pod 'UMengUShare/UI'
+
+  # 集成微信(精简版0.2M)
+  #pod 'UMengUShare/Social/ReducedWeChat'
+
+  # 集成QQ/QZone/TIM(精简版0.5M)
+  #pod 'UMengUShare/Social/ReducedQQ'
+
+  # 集成Facebook/Messenger
+  #pod 'UMengUShare/Social/Facebook'
+
+  # 集成Twitter
+  #pod 'UMengUShare/Social/Twitter'
+
+  #pod 'SevenSwitch'
+  
+  #pod 'PBJVision'
+  #pod 'AEXML'
+  #pod 'SVGKit'
+  #pod 'AliyunOSSiOS'
+end
+
+#为了使用爱加密的加固编译，关掉所有的bitcode
+post_install do | installer |
+    installer.pods_project.targets.each do | target |
+        target.build_configurations.each do | config |
+            config.build_settings['ENABLE_BITCODE'] = 'NO'
+            config.build_settings['ARCHS'] = 'arm64'
+        end
+    end
+end
