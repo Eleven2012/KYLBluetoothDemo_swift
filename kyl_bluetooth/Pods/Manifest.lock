@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 2fc560719c4d34eba734b50f1154bb63783d05e8
+PODS:
+  - BabyBluetooth (0.7.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - BabyBluetooth
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BabyBluetooth
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 040c4ea4f253a4f566a76339fe4c5f110e067ba9
 
 COCOAPODS: 1.5.3
